@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en" style="overflow-x:hidden" >
+<head>
+    
+  <title>Learnzilla E-Learning</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" style="color:aqua">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+    <style type="text/css">
+    .navbar-default {
+    background-color:maroon;
+    border-color: #BF4F51;
+}
+    .header
+    {
+        
+            width:100%;
+        }
+
+        .navbar-inverse
+        {
+            background-color:#ED872D;
+            top: 3px;
+            left: -12px;
+            height: 59px;
+            width:100%;
+        }
+        .auto-style4 {
+            color: #663300;
+        }
+        .auto-style5 {
+            color: #663300;
+            font-size: large;
+        }
+        .caret
+        {
+            color:white;
+        }
+       .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover
+       {
+           background-color:#ED872D;
+       }
+        /*.auto-style6 {
+            background-color: #ED872D;
+        }*/
+        .auto-style6 {
+            font-size: x-large;
+        }
+        #form1 {
+            height: 769px;
+            margin-right: 3px;
+        }
+    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>    
+</head>
+<body>
+
+    
+        <form id="form1" runat="server" >
+  <div class="header" >         
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.PNG" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<asp:ImageButton ID="ProfileIconBtn" runat="server" Height="43px" ImageUrl="~/Images/ProfilePic.png" Width="47px" />
+            &nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label1" runat="server" CssClass="auto-style6"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" ImageUrl="~/Images/Signout.png" Width="91px" OnClick="ImageButton1_Click" />           
+       </div>
+
+ <div style="width: 1426px">       <nav class="navbar navbar-inverse">
+    
+
+    
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav">
+      <li  style="font-size: large"><a href="HomePage.aspx" class="auto-style4"><strong><span style="color:#663300">Home</span></strong></a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="auto-style5"><strong>Course</strong></span> <span class="caret"></span>&nbsp;
+          
+          </a>
+        <ul class="dropdown-menu">
+          <li><a runat="server" href="~/CourseCS.aspx">C#</a></li>
+                        <li><a runat="server" href="~/CourseSQL.aspx">SQL</a></li>
+                       <li><a runat="server" href="~/JavaTopicIntro.aspx">Java</a></li>
+                       <li><a runat="server" href="~/CourseHTML.aspx">HTML</a></li>
+        </ul>
+      </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="auto-style5"><strong>Topics</strong></span> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+                      <li><a runat="server" href="~/JavaTopicIntro.aspx">Java Introduction</a></li>
+                        <li><a runat="server" href="~/JavaTopicDataTypes.aspx">Java DataTypes</a></li>
+                       <li><a runat="server" href="~/JavaTopicCondition.aspx">Java Conditional Statements</a></li>
+        </ul>
+      </li>
+        <li></li>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="auto-style5"><strong>Excercise</strong></span> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+                      <li><a runat="server" href="~/JavaExcercise1.aspx">JavaIntroduction</a></li>
+                        <li><a runat="server" href="~/JavaExcercise2.aspx">JavaDataTypes</a></li>
+                       <li><a runat="server" href="~/JavaExercise3.aspx">Java Conditional Statements</a></li>
+        </ul>
+      </li>
+      
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="auto-style5"><strong>Quiz</strong></span> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+                      <li><a runat="server" href="~/JavaQuiz1.aspx">JavaLevel1</a></li>
+                        <li><a runat="server" href="~/JavaQuiz2.aspx">JavaLevel2</a></li>
+                       <li><a runat="server" href="JavaQuiz3.aspx">JavaLevel3</a></li>
+        </ul>
+      </li>
+      <li class="auto-style4"><a href="FeedbackPage.aspx"><strong><span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Feedback</span></strong></a></li>
+        <li class="auto-style4"><a href="AboutUsPage.aspx"><strong><span class="auto-style5">About Us</span></strong></a></li>
+         <li class="auto-style4"><a href="ContactUsPage.aspx"><strong><span class="auto-style5">Contact Us</span></strong></a></li>
+     </ul>   
+   </div>
+  </div>
+        
+</nav></div>
+            <div>
+
+
+ 
+
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+  
+            </form>    
+
+    
+</body>
+</html>
+
+
+
